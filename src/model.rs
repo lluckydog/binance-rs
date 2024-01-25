@@ -1230,6 +1230,9 @@ pub struct DepthOrderBookEvent {
     #[serde(rename = "E")]
     pub event_time: u64,
 
+    #[serde(rename = "T")]
+    pub trade_order_time: u64,
+
     #[serde(rename = "s")]
     pub symbol: String,
 
