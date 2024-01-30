@@ -5,7 +5,7 @@ use crate::model::{
     IndexKlineEvent, IndexPriceEvent, KlineEvent, LiquidationEvent,
     MarkPriceEvent, MiniTickerEvent, OrderBook, TradeEvent, UserDataStreamExpiredEvent,
 };
-use crate::model:: {
+use crate::futures::model:: {
     BookTickerEvent, DepthOrderBookEvent,
 };
 use crate::futures::model;
