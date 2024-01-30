@@ -1,9 +1,12 @@
 use crate::errors::Result;
 use crate::config::Config;
 use crate::model::{
-    AccountUpdateEvent, AggrTradesEvent, BookTickerEvent, ContinuousKlineEvent, DayTickerEvent,
-    DepthOrderBookEvent, IndexKlineEvent, IndexPriceEvent, KlineEvent, LiquidationEvent,
+    AccountUpdateEvent, AggrTradesEvent, ContinuousKlineEvent, DayTickerEvent,
+    IndexKlineEvent, IndexPriceEvent, KlineEvent, LiquidationEvent,
     MarkPriceEvent, MiniTickerEvent, OrderBook, TradeEvent, UserDataStreamExpiredEvent,
+};
+use crate::model:: {
+    BookTickerEvent, DepthOrderBookEvent,
 };
 use crate::futures::model;
 use error_chain::bail;
