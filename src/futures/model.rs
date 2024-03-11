@@ -612,6 +612,41 @@ pub struct OrderTradeEvent {
     pub order: OrderUpdate,
 }
 
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+#[serde(rename_all = "camelCase")]
+pub struct AggrTradesEvent {
+    #[serde(rename = "e")]
+    pub event_type: String,
+
+    #[serde(rename = "E")]
+    pub event_time: u64,
+
+    #[serde(rename = "s")]
+    pub symbol: String,
+
+    #[serde(rename = "a")]
+    pub aggregated_trade_id: u64,
+
+    #[serde(rename = "p")]
+    pub price: String,
+
+    #[serde(rename = "q")]
+    pub qty: String,
+
+    #[serde(rename = "f")]
+    pub first_break_trade_id: u64,
+
+    #[serde(rename = "l")]
+    pub last_break_trade_id: u64,
+
+    #[serde(rename = "T")]
+    pub trade_order_time: u64,
+
+    #[serde(rename = "m")]
+    pub is_buyer_maker: bool,
+}
+
 #[derive(Debug, Serialize, Deserialize, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct Income {
